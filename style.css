@@ -1,0 +1,202 @@
+/* --- Global Styles --- */
+body {
+    /* The Background Magic */
+    background-color: #333; 
+    background-image: url('baih.webp');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps image still while scrolling */
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #f0f2f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: transparent; /* Ensure this is transparent! */
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* --- Search & Grid Area --- */
+.search-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+input {
+    padding: 12px 15px;
+    width: 60%;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.stop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+    gap: 12px;
+    max-height: 320px;
+    overflow-y: auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+    backdrop-filter: blur(5px); /* Blur effect for modern look */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* --- Soft Angle Boxes --- */
+.stop-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 12px 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65px;
+    color: #333;
+    
+}
+
+.stop-box:hover {
+    background: #76abaf;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.stop-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* --- Summary & Favorites Card --- */
+.status-summary {
+    background: rgba(255, 243, 205, 0.9);
+    color: #856404;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+    border-left: 5px solid #ffc107;
+}
+
+.bus-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    color: #333;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-left: 6px solid #c99506db;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Container for text info to keep it on the left */
+.bus-info-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* --- Buttons & Tags --- */
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.nav-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    background: #ffd32543;
+    color: white;
+}
+
+.delete-btn { background: #e74c3c; color: white; padding: 8px 12px; }
+.edit-btn { background: #546e7a; color: white; }
+.save-btn {
+    background: #81b261e9;
+    color: white;
+    margin-left: auto; 
+    white-space: nowrap;
+}
+
+.route-badge {
+    background: #e7c73c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.stop-id-tag {
+    background: #e0e0e0;
+    color: #666;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.8rem;
+}
+
+.wait-time {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #70621b;
+    margin: 10px 0;
+}
+
+.live-indicator.active {
+    color: #2ecc71;
+    font-weight: bold;
+    animation: blink 2s infinite;
+}
+
+.controls {
+    margin-top: 10px;
+    margin-bottom: 25px; /* This creates the space between the Refresh button and the cards */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#backBtn {
+    background-color: #455a64; 
+    color: white;
+    white-space: nowrap; /* Prevents the button text from wrapping */
+    margin-left: 20px;
+}
+
+#backBtn:hover {
+    background-color: #263238;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}

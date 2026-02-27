@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Saved Stops</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="controls">
+            <button id="backBtn" class="edit-btn">🏠 Back to Search</button>
+            <button onclick="loadFavs()">🔄 Refresh Now</button>
+        </div>
+        
+        <h1>⭐ My Favorites</h1>
+        <div id="statusSummary" class="status-summary">
+            Loading summary...
+        </div>
+        
+        <div class="controls">
+            <button onclick="loadFavs()">🔄 Refresh Now</button>
+            <span id="lastUpdated" style="font-size: 0.8em; color: #888;"></span>
+        </div>
+
+        <div id="favoritesList"></div>
+    </div>
+    <script src="favorites.js"></script>
+</body>
+</html>

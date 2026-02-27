@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KMB Stop Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📍 KMB Station Hub</h1>
+        
+        <div class="search-section">
+            <input type="text" id="stopInput" placeholder="Filter stops or type area...">
+            <button id="searchStopBtn">🔍 Filter</button>
+        </div>
+
+        <h3>Available Stops</h3>
+        <div id="stopGrid" class="stop-grid">
+            </div>
+        
+        <hr>
+        <div id="routeResults">
+            <p class="placeholder-text">Select a stop above to view live arrival times.</p>
+        </div>
+
+        <button id="favPageBtn" class="nav-btn">⭐ Open My Favorites</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
